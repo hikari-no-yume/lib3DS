@@ -33,6 +33,7 @@
         screen.style.width = width + 'px';
         screen.style.height = height + 'px';
         screen.style.overflow = 'hidden';
+        screen.style.position = 'relative';
         // Centres screen - needed for modes where both screens aren't same size
         screen.style.margin = '0 auto';
         document.body.appendChild(screen);
