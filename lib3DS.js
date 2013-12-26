@@ -15,7 +15,7 @@
         var meta;
         meta = document.createElement('meta');
         meta.name = 'viewport';
-        meta.content = 'width=' + width + ', initial-scale=1, maximum-scale=1';
+        meta.content = 'width=' + width + ', initial-scale=1, user-scalable=no';
         document.head.appendChild(meta);
         return meta;
     }
@@ -34,8 +34,6 @@
         screen.style.height = height + 'px';
         screen.style.overflow = 'hidden';
         screen.style.position = 'relative';
-        // Centres screen - needed for modes where both screens aren't same size
-        screen.style.margin = '0 auto';
         document.body.appendChild(screen);
         return screen;
     }
@@ -82,26 +80,6 @@
         topScreen = addScreen(320, 218);
         bottomScreen = addScreen(320, 212);
         stickTo(0, 218);
-        
-        return {
-            topScreen: topScreen,
-            bottomScreen: bottomScreen
-        };
-    };
-
-    // Sets up display mode and returns object containing two keys:
-    // "topScreen" - DOM element of div showing on top screen of 3DS
-    // "bottomScreen" - DOM element of div showing on bottom screen of 3DS
-    // In this mode, top screen is 400x218px and the bottom screen is 320x212px.
-    // Pressing the left, right or down keys may cause bouncing.
-    lib3DS.initMode400320 = function () {
-        var meta, topScreen, bottomScreen;
-        
-        removePadding();
-        makeMetaViewport(400);
-        topScreen = addScreen(400, 218);
-        bottomScreen = addScreen(320, 212);
-        stickTo(40, 218);
         
         return {
             topScreen: topScreen,
