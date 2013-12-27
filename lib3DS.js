@@ -70,16 +70,16 @@
     // Sets up display mode and returns object containing two keys:
     // "topScreen" - DOM element of div showing on top screen of 3DS
     // "bottomScreen" - DOM element of div showing on bottom screen of 3DS
-    // In this mode, top screen is 320x218px and the bottom screen is 320x212px.
+    // In this mode, top screen is 320x214px and the bottom screen is 320x212px.
     // Pressing the up key may cause bouncing.
     lib3DS.initModeDual320 = function () {
         var meta, topScreen, bottomScreen;
         
         removePadding();
         makeMetaViewport(320);
-        topScreen = addScreen(320, 218);
+        topScreen = addScreen(320, 214);
         bottomScreen = addScreen(320, 212);
-        stickTo(0, 218);
+        stickTo(0, 214);
         
         return {
             topScreen: topScreen,

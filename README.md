@@ -36,7 +36,7 @@ The "bouncing" mentioned is due to the left, right, up or down keys moving the p
   Sets up display mode and returns object containing two keys:
   * **topScreen** - DOM element of div showing on top screen of 3DS
   * **bottomScreen** - DOM element of div showing on bottom screen of 3DS
-  In this mode, top screen is 320x218px and the bottom screen is 320x212px.
+  In this mode, top screen is 320x214px and the bottom screen is 320x212px.
   Pressing the up key may cause bouncing.
 
 * **lib3DS.handleButtons**([*onkeydown*[, *onkeyup*]])
