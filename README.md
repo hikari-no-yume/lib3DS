@@ -11,7 +11,7 @@ Me, [Andrea Faulds](http://ajf.me/). I admittedly took some ideas on how to deal
 
 What license is it under?
 -------------------------
-The MIT license, see the LICENSE file.
+The MIT license, see the header of lib3DS.js
 
 How do I use it?
 ----------------
